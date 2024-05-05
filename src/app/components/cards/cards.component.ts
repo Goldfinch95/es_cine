@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 
 @Component({
@@ -9,5 +9,6 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrl: './cards.component.css'
 })
 export class CardsComponent {
-
+  @Input() movieData: any;
+  @Input() index:any;
 }

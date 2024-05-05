@@ -2,34 +2,5 @@
 <app-navbar/>
 <!--home-->
 <div class="container-fluid bg-dark">
-    <div class="container mobile-transparent-bg p-0 bg-primary">
-        <div class="row px-3">
-            <div class="col-12 col-lg-3 text-center p-3">
-                <app-cards/>
-            </div>
-            <div class="col-12 col-lg-3 text-center p-3">
-                <app-cards/>
-            </div>
-            <div class="col-12 col-lg-3 text-center p-3">
-                <app-cards/>
-            </div>
-            <div class="col-12 col-lg-3 text-center p-3">
-                <app-cards/>
-            </div>
-        </div>
-        <div class="row px-3">
-            <div class="col-12 col-lg-3 text-center p-3">
-                <app-cards/>
-            </div>
-            <div class="col-12 col-lg-3 text-center p-3">
-                <app-cards/>
-            </div>
-            <div class="col-12 col-lg-3 text-center p-3">
-                <app-cards/>
-            </div>
-            <div class="col-12 col-lg-3 text-center p-3">
-                <app-cards/>
-            </div>
-        </div>
-    </div>
+    <app-movies-container [listOfMovies]="movies"/>
 </div>

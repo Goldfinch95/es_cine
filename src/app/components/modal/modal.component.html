@@ -9,7 +9,7 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content bg-dark">
       <div class="modal-header d-flex justify-content-between">
-        <h5 class="modal-title text-white" id="exampleModalLongTitle">Dune</h5>
+        <h5 class="modal-title text-white" id="exampleModalLongTitle">{{movieData.title}}</h5>
         <button
           type="button"
           class="close"
@@ -23,7 +23,7 @@
         <div class="row">
           <div class="col-6">
             <img
-              src="https://i.ebayimg.com/images/g/JFcAAOSwsuVlvUQO/s-l1200.webp"
+            [src]="'https://image.tmdb.org/t/p/w500' + movieData.poster_path"
               class="img-fluid h-100 w-100"
               alt=""
             />
@@ -32,11 +32,7 @@
             <div class="row d-flex flex-column text-white">
               <div class="col">
                 <p>
-                  Paul Atreides se une a Chani y a los Fremen mientras busca
-                  venganza contra los conspiradores que destruyeron a su
-                  familia. Paul se enfrenta a una elección entre el amor de su
-                  vida y el destino del universo, y debe evitar un futuro
-                  terrible.
+                  {{movieData.overview}}
                 </p>
               </div>
               <div class="col">
