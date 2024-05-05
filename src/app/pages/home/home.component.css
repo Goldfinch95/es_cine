@@ -1,0 +1,5 @@
+@media (max-width: 576px) { /* Aplicar solo en dispositivos móviles */
+    .mobile-transparent-bg {
+        background-color: transparent !important;
+    }
+}

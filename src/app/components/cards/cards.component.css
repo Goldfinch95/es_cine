@@ -87,8 +87,7 @@
     justify-content: space-between;
     position: absolute;
     left: 0;
-    width: 100%;
-    padding: 30px;
+    
     outline: 1px solid transparent;
     perspective: inherit;
     z-index: 2;
@@ -98,15 +97,10 @@
     -ms-transform: translateY(-50%) translateZ(60px) scale(0.94);
     -o-transform: translateY(-50%) translateZ(60px) scale(0.94);
     top: 50%;
+    height: 100%;
   }
   
-  .inner-back h4 {
-    text-align: center;
-    padding-bottom: 15px;
-  }
-  .inner-back p {
-    padding: 2px;
-  }
+  
   
   .flip-box-header {
     font-size: 30px;

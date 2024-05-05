@@ -1,4 +1,38 @@
 <div class="flip-box">
+  <div class="card flip-box-front text-center" [style.background-image]="'url(https://i.ebayimg.com/images/g/JFcAAOSwsuVlvUQO/s-l1200.webp)'" style="background-size:contain; background-repeat: no-repeat; background-position: center;background-size: 100% 100%;"></div>
+  <div class="card flip-box-back text-center bg-black">
+    <div class="overlay"></div>
+    <div class="inner-back text-white w-100 d-flex align-items-center h-auto">
+      <div class="row m-3 w-100">
+        <div class="col">
+          <h1 class="text-start ps-2">Dune</h1>
+        </div>
+      </div>
+      <div class="inner-back-content d-flex align-items-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col p-5 p-lg-4 ">
+            <p class="fs-lg-6 fs-5">
+              Paul Atreides se une a Chani y a los Fremen mientras busca venganza contra los conspiradores que destruyeron a su familia. Paul se enfrenta a una elección entre el amor de su vida y el destino del universo, y debe evitar un futuro terrible.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row py-2">
+        <div class="col">
+          <div class="d-flex justify-content-between">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+              Leer mas!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-modal/>
+
+
+<!--<div class="flip-box">
   <div
     class="card flip-box-front text-center"
     [style.background-image]="
@@ -6,20 +40,25 @@
     "
   ></div>
   <div
-    class="card flip-box-back text-center"
-    [style.background-image]="
-      'url(https://w0.peakpx.com/wallpaper/689/545/HD-wallpaper-light-black-blue-colors-dark-gradient-gray-green-plain-purple-solid.jpg)'
-    "
+    class="card flip-box-back text-center bg-black"
   >
     <div class="overlay"></div>
     <div class="inner-back text-white">
-      <h4>Dune</h4>
-      <p>
-        Paul Atreides se une a Chani y a los Fremen mientras busca venganza
-        contra los conspiradores que destruyeron a su familia. Paul se enfrenta
-        a una elección entre el amor de su vida y el destino del universo, y
-        debe evitar un futuro terrible.
-      </p>
+      <div class="row m-3 align-items-center justify-content-center bg-info ">
+        <div class="col text-center">
+          <h1>Dune</h1>
+        </div>
+      </div>
+      <div class="row bg-info">
+        <div class="col">
+          <p>
+            Paul Atreides se une a Chani y a los Fremen mientras busca venganza
+            contra los conspiradores que destruyeron a su familia. Paul se enfrenta
+            a una elección entre el amor de su vida y el destino del universo, y
+            debe evitar un futuro terrible.
+          </p>
+        </div>
+      </div>
       <div class="d-flex justify-content-between">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
           Launch demo modal
@@ -29,4 +68,4 @@
     </div>
   </div>
 </div>
-<app-modal/>
+<app-modal/>-->
