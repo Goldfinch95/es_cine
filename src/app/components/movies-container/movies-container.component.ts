@@ -13,4 +13,5 @@ export class MoviesContainerComponent {
 
   @Input() listOfMovies: any;
   
+  
 }

@@ -2,26 +2,26 @@
   <div class="card flip-box-front text-center" [style.background-image]="'url(https://image.tmdb.org/t/p/w500' + movieData.poster_path + ')'" style="background-size:contain; background-repeat: no-repeat; background-position: center;background-size: 100% 100%;"></div>
   <div class="card flip-box-back text-center bg-black">
     <div class="overlay"></div>
-    <div class="inner-back text-white w-100 d-flex align-items-center h-auto">
-      <div class="row m-3 w-100">
+    <div class="inner-back text-white w-100 d-flex align-items-center">
+      <div class="row m-3 m-lg-2 w-100">
         <div class="col">
-          <h1 class="text-start ps-2">{{movieData.title}}</h1>
+          <h1 class="text-start ps-2 pt-2 p-lg-2 pb-lg-0 fw-bold">{{movieData.title}}</h1>
         </div>
       </div>
       <div class="inner-back-content d-flex align-items-center">
         <div class="row d-flex justify-content-center align-items-center">
-          <div class="col p-5 p-lg-4 ">
-            <p class="fs-lg-6 fs-5">
-              {{movieData.overview}}
+          <div class="col text-start p-lg-4 ">
+            <p class="fs-lg-6 p-3 p-lg-0 m-lg-0">
+              {{shortenDescription(movieData.overview)}}
             </p>
           </div>
         </div>
       </div>
-      <div class="row py-2">
-        <div class="col">
-          <div class="d-flex justify-content-between">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Leer mas!
+      <div class="row h-100 w-100 py-2">
+        <div class="col d-flex align-items-center justify-content-center">
+          <div class="d-flex justify-content-between ">
+            <button type="button" class="btn btn-primary w-100" data-toggle="modal" [attr.data-target]="'#modalIndex' + index">
+              <span class="fs-3 fw-bold">Leer más</span>
             </button>
           </div>
         </div>
@@ -29,43 +29,4 @@
     </div>
   </div>
 </div>
-<app-modal [movieData]="movieData"/>
-
-
-<!--<div class="flip-box">
-  <div
-    class="card flip-box-front text-center"
-    [style.background-image]="
-      'url(https://i.ebayimg.com/images/g/JFcAAOSwsuVlvUQO/s-l1200.webp)'
-    "
-  ></div>
-  <div
-    class="card flip-box-back text-center bg-black"
-  >
-    <div class="overlay"></div>
-    <div class="inner-back text-white">
-      <div class="row m-3 align-items-center justify-content-center bg-info ">
-        <div class="col text-center">
-          <h1>Dune</h1>
-        </div>
-      </div>
-      <div class="row bg-info">
-        <div class="col">
-          <p>
-            Paul Atreides se une a Chani y a los Fremen mientras busca venganza
-            contra los conspiradores que destruyeron a su familia. Paul se enfrenta
-            a una elección entre el amor de su vida y el destino del universo, y
-            debe evitar un futuro terrible.
-          </p>
-        </div>
-      </div>
-      <div class="d-flex justify-content-between">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-          Launch demo modal
-        </button>
-        
-      </div>
-    </div>
-  </div>
-</div>
-<app-modal/>-->
+<app-modal [movieData]="movieData" [index]="index"/>

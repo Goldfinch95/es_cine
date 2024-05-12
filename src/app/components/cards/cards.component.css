@@ -100,16 +100,15 @@
     height: 100%;
   }
   
-  
+  .inner-back h1 {
+    font-size: 24px;
+  }
   
   .flip-box-header {
     font-size: 30px;
   }
   
-  .flip-box p {
-    font-size: 15px;
-    line-height: 1.5rem;
-  }
+
   
   .flip-box-button {
     background-color: transparent;
@@ -136,4 +135,10 @@
     background-color: rgba(0, 0, 0, 1); /* ajusta el valor de opacidad aquí*/ 
   }
   
+
+  @media (max-width: 767px) {
+    .h1 {
+        font-size: 14px;
+    }
+}
 

@@ -11,4 +11,15 @@ import { ModalComponent } from '../modal/modal.component';
 export class CardsComponent {
   @Input() movieData: any;
   @Input() index:any;
+
+
+  shortenDescription(movieData: string){
+    if (movieData.length >= 300) {
+     const cut = movieData.substring(0, 300).lastIndexOf(' ');
+     return movieData.substring( 0, cut) + '...';
+    }
+    else{
+      return movieData
+    }
+  }
 }
