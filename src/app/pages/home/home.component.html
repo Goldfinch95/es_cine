@@ -2,5 +2,5 @@
 <app-navbar/>
 <!--home-->
 <div class="container-fluid bg-dark">
-    <app-movies-container [listOfMovies]="movies"/>
+    <app-movies-container [listOfMovies]="movies"(pageChange)="handlePageChange($event)"/>
 </div>

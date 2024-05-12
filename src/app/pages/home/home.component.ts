@@ -5,6 +5,8 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { lastValueFrom } from 'rxjs';
 import { Movie } from '../../interfaces/movies';
+
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -21,8 +23,16 @@ export class HomeComponent {
 
   constructor(private http: HttpClient) {}
 
+  handlePageChange(event: number) {
+    this.moviesPage = event;
+    this.fetchMovies();
+  }
 
-  async ngOnInit(): Promise<void> {
+  ngOnInit(): void {
+    this.fetchMovies();
+  }
+
+  async fetchMovies(): Promise<void> {
     //key y authorization
     const options = {
       headers: {
@@ -37,13 +47,13 @@ export class HomeComponent {
         params: {
           api_key: '50b7f173b32f82f7041c808f280e7eef',
           language: 'es-ES',
-          page: this.moviesPage.toString()
+          page: this.moviesPage
         },
         ...options
       }));
       //resultados almacenados
       this.movies = response.results;
-      console.log(this.movies);
+      console.log(this.movies)
     } catch (error) {
       console.error('Error fetching now playing movies:', error);
     }
