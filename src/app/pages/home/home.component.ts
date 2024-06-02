@@ -4,13 +4,14 @@ import { MoviesContainerComponent } from '../../components/movies-container/movi
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { lastValueFrom } from 'rxjs';
+import { SearchContainerComponent } from './components/search-container/search-container.component';
+import { TrendsComponent } from './components/trends/trends.component';
 import { Movie } from '../../interfaces/movies';
-
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent,MoviesContainerComponent, HttpClientModule],
+  imports: [NavbarComponent,SearchContainerComponent,TrendsComponent,MoviesContainerComponent, HttpClientModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

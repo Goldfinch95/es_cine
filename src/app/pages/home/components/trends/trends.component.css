@@ -1,0 +1,9 @@
+.img-background {
+    
+    background-image: url('../../../../../assets/img/ondas.png');
+    background-size: cover;
+    background-position: 100% 40%;
+    background-repeat: no-repeat;
+    min-height: 350px;
+
+  }

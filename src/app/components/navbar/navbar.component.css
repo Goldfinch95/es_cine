@@ -1,0 +1,7 @@
+nav {
+    background-color: #032541;
+}
+
+.dropdown-toggle::after{
+    content:none
+}

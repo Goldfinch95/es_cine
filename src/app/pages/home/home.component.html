@@ -1,6 +1,8 @@
 <!--navbar-->
-<app-navbar/>
+<app-navbar style="background-color: #032541;"/>
 <!--home-->
-<div class="container-fluid bg-dark">
-    <app-movies-container [listOfMovies]="movies"(pageChange)="handlePageChange($event)"/>
+<div class="">
+    <app-search-container></app-search-container>
+    <app-trends></app-trends>
+   <!-- <app-movies-container [listOfMovies]="movies"(pageChange)="handlePageChange($event)"/> -->
 </div>
